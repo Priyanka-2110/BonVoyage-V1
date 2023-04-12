@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<style type="text/css">
+	
+.PackageName{
+	border-bottom: 1px solid #777;
+	display: flex;
+	width: 1000px;
+	position: relative;
+	left: 100px;
+	font-family: cursive;
+	/*padding: 10px 200px 0 100px;*/
+}
+.PackageName i{
+	padding-top: 75px; 
+	position: relative; 
+	right: 180px;
+	font-size: 13px;
+	color: #536d77;
+	text-align: justify;
+}
+.PackageVideo{
+	position: relative;
+	top: 20px;
+	left: 100px;
+}
+.Advertisement h1{
+	position: fixed;
+	right: 85px;
+	top: 100px;
+}
+.Advertisement p{
+	font-size: 30px;
+	position: fixed;
+	right: 118px;
+	top: 450px;
+}
+figure.Ad {
+	position: relative;
+	bottom: 577px;
+	left: 1150px;
+	float: left;
+    width: 300px;
+}
+figure.Ad img {
+	width: 300px;
+  	height: 300px;
+    position: fixed;
+	right: 70px;
+	top: 180px;
+}
+.collapsible {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 25px;
+  width: 1000px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  position: relative;
+  left: 100px;
+  top: 50px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  border-left: 6px solid #000000;
+}
+
+.collapsible:after {	/*after add +sign at the right end*/
+  content: '\002B';
+  color: #F0E161;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.collapsible:focus{
+	background-color: white;
+}
+.active:after {
+  content: "\2212";		/*from js*/
+}
+
+.active, .collapsible:hover {
+	border-left: 6px solid #F0E161;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;		/*ease-out: fast/abrupt at the beginning, slow at the end*/
+  background-color: white;
+  color: #777;
+  width: 955px;
+  position: relative;
+  left: 101px;
+  top: 50px;
+  border: 0.1px solid #555;
+  border-left: 6px solid #F0E161;
+  border-radius: 5px;
+  text-align: justify;
+}
+
+.info {
+	padding: 0 0 0 100px; 
+	color: #777;
+	position: relative;
+	bottom: 10px;
+}
+</style>
+{{> header }}
+</head>
+
+<body>
+	{{> navbar }}
+	<div class="PackageName">
+		<h1>KERALA</h1>
+		<i class="fa-solid fa-location-dot" style="position: relative; right: 125px;">Kerala, Cochin, India</i>
+		<i class="fa-regular fa-clock"style=" padding-top: 100px; position: relative; right: 310px; font-size: 13px;">7 Nights 8 Days</i>
+  	</div>
+  	<div class="PackageVideo">
+  		<video width="1000" controls>
+ 			<source src="/IMAGES/Kerala.mp4" type="video/mp4">
+  			<!--<source src="C:\Users\Priyanka GS\OneDrive\Desktop\BON VOYAGE\VIDEOS\Delhi.mp4" type="video/mp4">-->
+ 			Your browser does not support HTML video.	
+ 		</video>
+	</div>
+
+	<div class="Advertisement">
+		<h1>ADVERTISEMENT</h1>
+		<figure class="Ad">
+			<img class="sticky" src="/IMAGES/IndianTourAd.png">
+		</figure> 
+		<p id="countdown"></p>
+	</div>
+
+	<h1 style="position: relative; top: 40px; right: 280px; ">Itinerary</h1>
+
+
+	<button class="collapsible">Day 1 : Trivandrum</button>
+	<div class="content">
+		<p>On arrival in Trivandrum, meet our tour representatives and get transferred to the hotel. After breakfast, proceed to some of the important places like Kaudiar Palace, Napier Museum, Padmanabhapuram Palace. Spend your overnight stay at the hotel.</p>
+	</div>
+
+	<button class="collapsible">Day 2 : Kovalam</button></button>
+	<div class="content">
+		<p>After breakfast, continue to Kovalam , Varkala Shoreline, Sankhumugham Shoreline and others. Later, get back to the resort for an overnight stay.</p>
+	</div>
+
+	<button class="collapsible">Day 3 : Allepey</button>
+	<div class="content">
+		<p>After breakfast, get into the luxury houseboat to delight in the backwater journey at Alleppey. This trip is thought to be one of the best attractions. All food will be given in the houseboat. Return back to the houseboat for overnight stay.</p>
+	</div>
+
+	<button class="collapsible">Day 4 : Thekkady</button>
+	<div class="content">
+		<p>Take your breakfast in the morning. Drive to Thekkady (Periyar)-India's most interesting common natural life heaven. After your arrival at Thekkady, check in at hotel and later move out for the nearby place. Visit The Periyar Untamed life Haven, Periyar Lake. Spend your overnight stay at Thekkady Inn.</p>
+	</div>
+
+	<button class="collapsible">Day 5 : Munnar</button>
+	<div class="content">
+		<p>After breakfast, move ahead to Munnar. Visit Anaimudi peak - the most elevated peak, Devikulam, Mettupatti Dam. You can enjoy your overnight Stay at Inn. Visit the Nyayamakad, Reverberation Point, Rajamala, Kundala, Force House Waterfalls, Malankara Reservoir and more. In the night, return back to the inn for an overnight stay.</p>
+	</div>
+
+	<button class="collapsible">Day 6 : Munnar</button>
+	<div class="content">
+		<p>After morning breakfast, proceed to Echo Point, Rajamala, Nyayamakad, Kundala, Power House Waterfalls, Malankara Reservoir. Flower arrangements will be done in the room. You can spend your overnight stay at Munnar Hotel.</p>
+	</div>
+
+	<button class="collapsible">Day 7 : Cochin</button>
+	<div class="content">
+		<p>Take your breakfast and move out of Cochin. Visit the Dutch Palace, Jewish Synagogue, Chinese fishing nets St:Francis Church, and Cherai Beach. Get back to hotel for night stay.</p>
+	</div>
+
+	<button class="collapsible">Day 8 : Cochin</button>
+	<div class="content">
+		<p>On the last day of your trip after breakfast, proceed to Cochin airport or railway station.</p>
+	</div><br><br><br><br><br>
+
+
+	<div class="info">
+		<p><b>Duration :</b> 07 Nights / 8 Days</p>
+		<p><b>Destinations :</b> Trivandrum – Kovalam – Allepey – Thekkady – Munnar – Cochin</p>
+	</div>
+
+	<script>
+		//-----------------------------------------------------------CountDown------------------------------------------------------------------------------------------------
+				// Set the date we're counting down to
+				var countDownDate = new Date("Nov 25, 2022 15:37:25").getTime();
+		
+				// Update the count down every 1 second
+				var Timer = setInterval(function() {
+		
+				// Get today's date and time
+				var now = new Date().getTime();
+					
+				// Find the interval between now and the count down date
+				var interval = countDownDate - now;
+					
+				// Time calculations for days, hours, minutes and seconds
+				var days = Math.floor(interval / (1000 * 60 * 60 * 24));		//86400(total number of milliseconds in a day)
+				var hours = Math.floor((interval % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));		//days/total number of milliseconds in an hour
+				var minutes = Math.floor((interval % (1000 * 60 * 60)) / (1000 * 60));		//hours/number of milliseconds in a minute
+				var seconds = Math.floor((interval % (1000 * 60)) / 1000);		//minutes/number of seconds
+					
+				// Output the result in an element with id="demo"
+				document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+					
+				// If the count down is over, write some text 
+				if (interval < 0) {
+					clearInterval(Timer);
+					document.getElementById("countdown").innerHTML = "EXPIRED";
+				}
+				},1000);
+				//https://stackoverflow.com/questions/51078140/calculation-of-countdown-timer#:~:text=var%20days%20%3D%20Math.-,floor(distance%20%2F%20(1000%20*%2060%20*%2060%20*%2024,of%20milliseconds%20in%20a%20day.
+		
+		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				var coll = document.getElementsByClassName("collapsible");
+				var i;
+		
+				for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function() {
+					this.classList.toggle("active"); 		//toggle - hide/show
+					var content = this.nextElementSibling;
+					if (content.style.maxHeight){		//maxHeight=0 
+					content.style.maxHeight = null;		//maxHeight property sets or returns the maximum height of an element.
+					} else {
+					content.style.maxHeight = content.scrollHeight + "px";	//scrollHeight-the minimum height the element would require in order to fit all the content in the viewport without using a vertical scrollbar.
+					} 
+				});
+				}
+			</script>
+		
+</body>
+</HTML>

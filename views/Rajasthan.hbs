@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<style type="text/css">
+	
+.PackageName{
+	border-bottom: 1px solid #777;
+	display: flex;
+	width: 1000px;
+	position: relative;
+	left: 100px;
+	font-family: cursive;
+	/*padding: 10px 200px 0 100px;*/
+}
+.PackageName i{
+	padding-top: 75px; 
+	position: relative; 
+	right: 180px;
+	font-size: 13px;
+	color: #536d77;
+	text-align: justify;
+}
+.PackageVideo{
+	position: relative;
+	top: 20px;
+	left: 100px;
+}
+.Advertisement h1{
+	position: fixed;
+	right: 85px;
+	top: 100px;
+}
+.Advertisement p{
+	font-size: 30px;
+	position: fixed;
+	right: 118px;
+	top: 450px;
+}
+figure.Ad {
+	position: relative;
+	bottom: 577px;
+	left: 1150px;
+	float: left;
+    width: 300px;
+}
+figure.Ad img {
+	width: 300px;
+  	height: 300px;
+    position: fixed;
+	right: 70px;
+	top: 180px;
+}
+.collapsible {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 25px;
+  width: 1000px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  position: relative;
+  left: 100px;
+  top: 50px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  border-left: 6px solid #000000;
+}
+
+.collapsible:after {	/*after add +sign at the right end*/
+  content: '\002B';
+  color: #F0E161;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";		/*from js*/
+}
+.collapsible:focus{
+	background-color: white;
+}
+.active, .collapsible:hover {
+	border-left: 6px solid #F0E161;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;		/*ease-out: fast/abrupt at the beginning, slow at the end*/
+  background-color: white;
+  color: #777;
+  width: 955px;
+  position: relative;
+  left: 101px;
+  top: 50px;
+  border: 0.1px solid #555;
+  border-left: 6px solid #F0E161;
+  border-radius: 5px;
+  text-align: justify;
+}
+
+.info {
+	padding: 0 0 0 100px; 
+	color: #777;
+	position: relative;
+	bottom: 10px;
+}
+</style>
+{{> header }}
+</head>
+
+<body>
+	{{> navbar }}
+	<div class="PackageName">
+		<h1>RAJASTHAN</h1>
+		<i class="fa-solid fa-location-dot">Delhi, Agra, Jaipur, Jodhpur, Udaipur</i>
+		<i class="fa-regular fa-clock"style=" padding-top: 100px; position: relative; right: 485px; font-size: 13px;">7 Nights 8 Days</i>
+  	</div>
+  	<div class="PackageVideo">
+  		<video width="1000" controls>
+ 			<source src="/IMAGES/Himachal.mp4" type="video/mp4">
+  			<!--<source src="C:\Users\Priyanka GS\OneDrive\Desktop\BON VOYAGE\VIDEOS\Delhi.mp4" type="video/mp4">-->
+ 			Your browser does not support HTML video.	
+ 		</video>
+	</div>
+
+	<div class="Advertisement">
+		<h1>ADVERTISEMENT</h1>
+		<figure class="Ad">
+			<img class="sticky" src="/IMAGES/IndianTourAd.png">
+		</figure> 
+		<p id="countdown"></p>
+	</div>
+
+	<h1 style="position: relative; top: 40px; right: 280px; ">Itinerary</h1>
+
+
+	<button class="collapsible">Day 1 : Arrive Delhi</button>
+	<div class="content">
+		<p>Upon your arrival at Delhi, our tour representatives will welcome and guide you for the entire trip. You will be taken for a half day tour to Delhi. Visit Qutub Minar constructed by Qutub-ud-Din Aibek in 1199. Proceed to Jama Masjid, Red Fort & India Gate (War Memorial Arch). Continue your journey towards the President's House, Parliament House, Government Secretariat Buildings and Connaught Place shopping plaza. Spend your overnight stay at Delhi.</p>
+	</div>
+
+	<button class="collapsible">Day 2 : Delhi – Agra (220 kms , 05 Hrs)</button></button>
+	<div class="content">
+		<p>After breakfast, continue to Agra. Reach the destination and get into the hotel to relax sometime. In the evening, try to explore the well known market sectors of Agra. Get back to the hotel for overnight stay.</p>
+	</div>
+
+	<button class="collapsible">Day 3 : Agra-Jaipur (265 kms, 05hrs)</button>
+	<div class="content">
+		<p>In the morning, visit the world popular Taj Mahal fabricated by the Mughul Emperor Shahjehan in 1630 for his Queen Mumtaz Mahal to hallow her mortal remains. Later, visit the Agra Fort containing the Pearl Mosque and the Halls of Public & Private Audience. Additionally, visit the Tomb of Itmad-ud-Daullah manufactured by Empress Noorjehan in memory of her father. In the evening, drive to Jaipur enroute Fatehpur Sikri. You need to know that Fatehpur Sikri is 40 kms from Agra and fabricated by Emperor Akbar in 1569 and deserted following 15 years because of lack of water. See the elegant structures including the Jama Masjid, Tomb of Salim Chisti, Panch Mahal and different Palaces. Arrive Jaipur and register with inn for overnight stay.</p>
+	</div>
+
+	<button class="collapsible">Day 4 : Jaipur</button>
+	<div class="content">
+		<p>On this day, visit Amber Fort. The Amber Fort was the ancient capital of the State. View the Sheesh Mahal or the Hall of Victory shining with mirrors. In the evening, proceed with Jaipur sightseeing, visit Maharaja's City Palace & the Observatory. View the past Hawa Mahal & throughout the pink rose private & business zones. Spend your overnight stay at Jaipur.</p>
+	</div>
+
+	<button class="collapsible">Day 5 : Jaipur – Jodhpur (330 kms / 06 hrs)</button>
+	<div class="content">
+		<p>After breakfast, move ahead to Jodhpur, on the way visit Pushkar. Visit the main sanctuary of Lord Brahma encompassed by Pushkar Lake. You will find the devotees taking plunge into the heavenly waters of Pushkar & offering petitions to God at the banks of the lake. Ensure to check out the Fair Site, which is right inverse the Pushkar Lake. Alternatively, you can visit Ajmer Khwaja Dargah in Ajmer (11 kms). After, lunch proceed with your driver to Jodhpur. Arrive Jodhpur at night and enjoy the day at your leisure. You will be spending the overnight sleep at Jodhpur. (By means of Pushkar/Ajmer)</p>
+	</div>
+
+	<button class="collapsible">Day 6 : Jodhpur - Udaipur (276 Kms - 5 hours)</button>
+	<div class="content">
+		<p>After breakfast, take a drive through Jodhpur and visit the Mehrangarh Fort, Jaswant Thada (Mausoleums of the incredible Rajput Warrior) and Umaid Bhawan Palace Museum. After lunch, proceed to Udaipur. On the way, visit the highly praised Ranakpur Temples of twelfth Century, Proceed to Udaipur and reach the hotel. Get into the hotel and relax for sometime. Spend your overnight sleep in Udaipur.</p>
+	</div>
+
+	<button class="collapsible">Day 7 : Udaipur</button>
+	<div class="content">
+		<p>After your morning breakfast, take a sightseeing voyage tour through Udaipur. You will be visiting the City Palace implicit 1559, a little royal residence over the Lake Pichola. The other main fascinating tourist attractions of the city include Crystal Gallery, Durbar Hall, Jagdish Temple and Palace Museum. Later, visit Saheli Ki Bari and explore the small ornamental garden build in honor of Royal Ladies. Ensure to visit the Lok Kala Mandal and view the people dresses, trimmings, manikins, veils, dolls society musical instruments, people’s gods and painted creations. Opened seven days a week, manikin shows and society moving are led each night from 18:00 to 19:00 in a neighbouring outdoors theatre & Shilpgram to see the town expressions & creates. Spend your overnight stay at Udaipur.</p>
+	</div>
+
+	<button class="collapsible">Day 8 : Udaipur Departure</button>
+	<div class="content">
+		<p>After your breakfast, relax at the grand hotel or go out for shopping at the nearby streets. Later, move to the railway station or airport for flight to get back home</p>
+	</div><br><br><br><br><br>
+
+	<div class="info">
+		<p><b>Duration :</b> 07 Nights / 08 Days</p>
+		<p><b>Destinations :</b> Delhi-Agra-Jaipur-Jodhpur-Udaipur</p>
+	</div>
+
+	<script>
+		//-----------------------------------------------------------CountDown------------------------------------------------------------------------------------------------
+				// Set the date we're counting down to
+				var countDownDate = new Date("Nov 25, 2022 15:37:25").getTime();
+		
+				// Update the count down every 1 second
+				var Timer = setInterval(function() {
+		
+				// Get today's date and time
+				var now = new Date().getTime();
+					
+				// Find the interval between now and the count down date
+				var interval = countDownDate - now;
+					
+				// Time calculations for days, hours, minutes and seconds
+				var days = Math.floor(interval / (1000 * 60 * 60 * 24));		//86400(total number of milliseconds in a day)
+				var hours = Math.floor((interval % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));		//days/total number of milliseconds in an hour
+				var minutes = Math.floor((interval % (1000 * 60 * 60)) / (1000 * 60));		//hours/number of milliseconds in a minute
+				var seconds = Math.floor((interval % (1000 * 60)) / 1000);		//minutes/number of seconds
+					
+				// Output the result in an element with id="demo"
+				document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+					
+				// If the count down is over, write some text 
+				if (interval < 0) {
+					clearInterval(Timer);
+					document.getElementById("countdown").innerHTML = "EXPIRED";
+				}
+				},1000);
+				//https://stackoverflow.com/questions/51078140/calculation-of-countdown-timer#:~:text=var%20days%20%3D%20Math.-,floor(distance%20%2F%20(1000%20*%2060%20*%2060%20*%2024,of%20milliseconds%20in%20a%20day.
+		
+		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				var coll = document.getElementsByClassName("collapsible");
+				var i;
+		
+				for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function() {
+					this.classList.toggle("active"); 		//toggle - hide/show
+					var content = this.nextElementSibling;
+					if (content.style.maxHeight){		//maxHeight=0 
+					content.style.maxHeight = null;		//maxHeight property sets or returns the maximum height of an element.
+					} else {
+					content.style.maxHeight = content.scrollHeight + "px";	//scrollHeight-the minimum height the element would require in order to fit all the content in the viewport without using a vertical scrollbar.
+					} 
+				});
+				}
+			</script>
+		
+</body>
+</HTML>

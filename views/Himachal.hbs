@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<link rel="stylesheet" href="StyleSheet.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<style type="text/css">
+	
+.PackageName{
+	border-bottom: 1px solid #777;
+	display: flex;
+	width: 1000px;
+	position: relative;
+	left: 100px;
+	font-family: cursive;
+	/*padding: 10px 200px 0 100px;*/
+}
+.PackageName i{
+	padding-top: 75px; 
+	position: relative; 
+	right: 180px;
+	font-size: 13px;
+	color: #536d77;
+	text-align: justify;
+}
+.PackageVideo{
+	position: relative;
+	top: 20px;
+	left: 100px;
+}
+.Itinerary{
+	display: flex;
+	flex-direction: column;
+	width: 998px;
+	position: relative;
+	left: 150px;
+	top: 40px;
+	border: 0 0 0 0;
+	/*border: 1px solid black;*/
+	border-left-style: dashed;
+	padding: 0 0 50px 0;
+	height: 650px;
+}
+.Itinerary .Days{
+	padding: 0 0 0 100px;
+	text-align: justify;
+	position: relative;
+	right: 60px;
+
+}
+.tracker{
+	display: flex;
+	flex-direction: column;
+}
+span{
+	position: relative;
+	line-height: 70px;
+	background-color: yellow;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+    font-size: 30px;
+	border-radius: 50%;
+}
+</style>
+{{> header }}
+</head>
+
+<body>
+	{{> navbar }}
+	<div class="PackageName">
+		<h1>HIMACHAL</h1>
+		<i class="fa-solid fa-location-dot">Delhi, Shimla, Manali, Chanigarh</i>
+		<i class="fa-regular fa-clock"style=" padding-top: 100px; position: relative; right: 460px; font-size: 13px;">6 Nights 7 Days</i>
+  	</div>
+  	<div class="PackageVideo">
+  		<video width="1000" controls>
+ 			<source src="/IMAGES/Himachal.mp4" type="video/mp4">
+  			<!--<source src="C:\Users\Priyanka GS\OneDrive\Desktop\BON VOYAGE\VIDEOS\Delhi.mp4" type="video/mp4">-->
+ 			Your browser does not support HTML video.	
+ 		</video>
+	</div>
+	<h1 style="padding: 40px 0 0 100px;">Itinerary</h1>
+	<div class="Itinerary">
+			<div class="Days">
+			<div class="Day1" style="height: auto;">
+				<h2>Day 1 : Delhi – Shimla (345kms/8hrs)</h2>
+				<p>After your arrival at New Delhi airport /railway station, our tour representatives transfer you by highway to Shimla. It is the capital of Himachal Pradesh and also the capital of Britishers situated at an elevation of (2500 mts). You can check out the snow topped Shivalik mountain ranges and experience a delightful journey. Get into the hotel and enjoy your overnight stay.<p>
+			</div>
+			<div class="Day2" style=" height: auto;">
+				<h2>Day 2 : Shimla</h2>
+				<p>After breakfast, get ready for a sightseeing tour around Shimla. You will be visiting the Naldhera Golf Course and Kufri – Snow point. In the evening, feel free to visit the famous place of Shimla town, The Mall Road & The crest. Spend your overnight stay at Shimla</p>
+			</div>
+			<div class="Day3" style="height: auto;">
+				<h2>Day 3 : Shimla – Manali (280kms/8hrs)</h2>
+				<p>Take your breakfast in the morning and drive to Manali – 280 kms. Manali is a flawless slope station secured with Snow Mountains & delightful waterfalls. Get back to the hotel and relax at your leisure. You can enjoy a great overnight stay at the hotel.</p>
+			</div>
+			<div class="Day4" style="height: auto;">
+				<h2>Day 4 : Manali</h2>
+				<p>After your morning breakfast, our tour representatives will take you for a short tour to Manali. The tour package include Hadimba Devi Temple, Vashisht Kund – Hot water spring, Tibetan Monasteries and nearby market. Enjoy the rest of the day at your leisure. Return back to the hotel for overnight stay.</p>
+			</div>
+			<div class="Day5" style="height: auto;">
+				<h2>Day 5 : Manali – Snow point Excursion</h2>
+				<p>After your early morning breakfast, get ready for a full day outing tour to Kothi Gorge, Gulaba, Marhi & Rohtang Pass (elevation 3978 mts) and Solang Valley. Move back to the hotel for overnight stay and pleasure in Manali. (Subject to season).</p>
+			</div>
+			<div class="Day6" style="height: auto;">
+				<h2>Day 6 : Manali – Chandigarh (320kms/8hrs)</h2>
+				<p>Take your breakfast in the morning. Drive to the beautiful city of Chandigarh. After your arrival in the evening, get into the hotel and relax for sometime. Later, you will be taken for a city voyage through Chandigarh, Rose enclosure, Rock arrangement, Sukhna Lake and so on. Come back to the hotel for relaxation and overnight stay.</p>
+			</div>
+			<div class="Day7" style="height: auto;">
+				<h2>Day 7 : Chandigarh - Delhi (250kms/5hrs)</h2>
+				<p>After your breakfast, check out the hotel and drive to Delhi (250 Kms). Upon arrival at Delhi, transfer to the railway station or airport for onward journey to home.</p>
+			</div>
+		</div>
+		<div class="tracker">
+			<span style="bottom: 800px; right: 38px;">1</span>
+			<span style="bottom: 750px; right: 38px;">2</span>
+			<span style="bottom: 710px; right: 38px;">3</span>
+			<span style="bottom: 680px; right: 38px;">4</span>
+			<span style="bottom: 630px; right: 38px;">5</span>
+			<span style="bottom: 590px; right: 38px;">6</span>
+			<span style="bottom: 540px; right: 38px;">7</span>
+		</div>
+	</div>
+</body>
+</HTML>

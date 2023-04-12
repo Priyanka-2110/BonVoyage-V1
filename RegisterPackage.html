@@ -1,0 +1,183 @@
+<!DOCTYPE HTML> 
+
+<HTML> 
+
+<head> 
+
+<style> 
+
+body{ 
+    background-image: url('IMAGES/Project.jpg'); 
+  	background-repeat: no-repeat; 
+  	background-attachment: fixed;  
+  	background-size: 100% 100%; 
+} 
+
+.outerbox{ 
+    width: 550px; 
+    margin: 40px auto 0px auto; 
+    position: relative; 
+    top: 8px; 
+} 
+
+.innerbox{ 
+    background-color: rgba(0,0,0,0.5);   /*black*/ 
+    width: 100%; 
+    font-size: 18%; 
+    border-radius: 10px; 
+    border: 1px solid rgba(255,255,255,0.3);  /*white*/ 
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3); 
+    color: white; 
+} 
+
+.form{ 
+    margin: 110px; 
+    position: relative; 
+    bottom: 40px; 
+    height: 400px; 
+} 
+
+input,select{ 
+    font-family: poppins; 
+    font-size: 18px; 
+    width: 300px; 
+    border: 1.5px solid #F0E161; 
+    border-radius: 3px; 
+    outline: 0; 
+    padding: 8px; 
+    background-color: #fff;  /*grey*/ 
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3); 
+} 
+
+select{ 
+    width: 319px; 
+    font-family: poppins; 
+    font-size: 18px; 
+    background-color: #fff; 
+    color: grey; 
+} 
+
+.submit{ 
+    width: 200px; 
+    padding: 8px; 
+    font-size: 16px; 
+    font-family: poppins; 
+    border-radius: 3px; 
+    background-color: #F0E161; 
+    color: black; 
+    cursor: pointer; 
+    border: 1px solid rgbs(255,255,255,0.3); 
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3); 
+    position: relative; 
+    left: 60px; 
+} 
+
+.select option:hover {background-color: #F0E161;} 
+    .btn{
+        padding: 10px 60px;
+        background-color: #F0E161;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: 500;
+        border-radius: 30px;
+        position: relative;
+        left: 60px;
+    }
+
+</style> 
+<!--https://www.w3schools.com/howto/howto_js_popup_chat.asp-->
+<title>Registration</title> 
+
+</head> 
+<body> 
+<div class="outerbox"> 
+<div class="innerbox"> 
+<form class="form" name="regForm" method="POST" onsubmit="return sendEmail()" reset(); return false;> 
+    <input  type = "text" tabindex="1" class="name" placeholder = "Name" name="name" required></input><br><br><br> <!--https://www.w3schools.com/howto/howto_css_placeholder.asp-->
+    
+    <input  type = "text" tabindex="2" placeholder = "City of Residence" name="city" required></input><br><br><br> 
+    
+    <input  type = "email" tabindex="3" class="email" id="email" placeholder = "Email" name="email" required></input><br><br><br> 
+    
+    <input  type = "tel" pattern="[0-9]{10}" tabindex="4" placeholder = "Phone Number" name="number" required></input><br><br><br> 
+    
+    <input  type = "text" tabindex="5" placeholder = "Travel Destination" name="destination" required></input><br><br><br> 
+    
+    <input  type = "date" tabindex="6" placeholder = "Date of Travel" name="date" required></input><br><br><br> 
+    
+    <input  type = "number" min="1" max="100" tabindex="7" placeholder = "Number of People" name="total" required></input><br><br><br> 
+    
+    <select id="type" tabindex="8" name="type" required>
+        <option value= "vacationType">Vacation Type</option> 
+        <option value="familyTrip">Family Trip</option> 
+        <option value="honymoonTrip">Honeymoon</option> 
+        <option value="friendsTrip">Friends Trip</option> 
+        <option value="corporateTrip">Corporate Trip</option> 
+  	</select><br><br><br><br><br><br><br> 
+
+<button class="submit" type = "submit" tabindex="9" id="myBtn">Submit</button> 
+
+</form>
+
+</div>
+</div>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script type="text/javascript"> 
+
+
+/*const form = document.querySelector("form");
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    let name = document.querySelector(".name").value;
+    let email = document.querySelector(".email").value;
+
+    document.querySelector(".form").reset();
+
+    sendEmail(name, email);
+  })
+  function sendEmail(name, email){
+    Email.send({
+        
+      Host: "smtp.elasticemail.com", 
+      Username: "bonvoyageproject1@gmail.com",
+      Password: "47F7A451D60B1F651D46FCAB5ACD4F2FFC48",
+      To: "gspriyankasarla@gmail.com",
+      From: "bonvoyageproject1@gmail.com",
+      Subject: `${name} Just messaged you from the website form`,
+      Body: `Name: ${name} <br> Email: ${email} <br>`,
+    }).then((success) => {
+      alert("message sent successfully. Please check the spam folder in your mail.");
+    }).catch((error) => {
+      alert("error sending message");
+    })
+  }
+
+function validate(){ 
+    var type = document.forms["regForm"]["type"].value;
+    if(type == "vacationType"){ 
+        alert("Select the vacation type"); 
+        return false; 
+    } 
+}*/
+/*function sendEmail(){
+
+        Email.send({
+        Host : "smtp.gmail.com",
+        Username : "bonvoyageproject1@gmail.com",
+        Password: "pqkzlomjrapmrlnn",
+        To: 'gspriyankasarala@gmail.com',
+        From : "bonvoyageproject1@gmail.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+    message => alert(message)
+    );
+}*/
+
+</script>
+</body> 
+</HTML> 

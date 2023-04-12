@@ -1,0 +1,261 @@
+<!DOCTYPE HTML> 
+
+<HTML> 
+
+<head> 
+
+<style> 
+
+body{ 
+    background-image: url('IMAGES/Project.jpg'); 
+  	background-repeat: no-repeat; 
+  	background-attachment: fixed;  
+  	background-size: 100% 100%; 
+} 
+
+.outerbox{ 
+    width: 550px; 
+    margin: 40px auto 0px auto; 
+    position: relative; 
+    top: 8px; 
+} 
+
+.innerbox{ 
+    background-color: rgba(0,0,0,0.5);   /*black*/ 
+    width: 100%; 
+    font-size: 18%; 
+    border-radius: 10px; 
+    border: 1px solid rgba(255,255,255,0.3);  /*white*/ 
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3); 
+    color: white; 
+} 
+
+.form{ 
+    margin: 110px; 
+    position: relative; 
+    bottom: 40px; 
+    height: 400px; 
+} 
+
+input,select{ 
+    font-family: poppins; 
+    font-size: 18px; 
+    width: 300px; 
+    border: 1.5px solid #F0E161; 
+    border-radius: 3px; 
+    outline: 0; 
+    padding: 8px; 
+    background-color: #fff;  /*grey*/ 
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3); 
+} 
+
+select{ 
+    width: 319px; 
+    font-family: poppins; 
+    font-size: 18px; 
+    background-color: #fff; 
+    color: grey; 
+} 
+
+.submit{ 
+    width: 200px; 
+    padding: 8px; 
+    font-size: 16px; 
+    font-family: poppins; 
+    border-radius: 3px; 
+    background-color: #F0E161; 
+    color: black; 
+    cursor: pointer; 
+    border: 1px solid rgbs(255,255,255,0.3); 
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3); 
+    position: relative; 
+    left: 60px; 
+} 
+
+.select option:hover {background-color: #F0E161;} 
+    .btn{
+        padding: 10px 60px;
+        background-color: #F0E161;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: 500;
+        border-radius: 30px;
+        position: relative;
+        left: 60px;
+    }
+
+    .popup{
+        width: 300px;
+        background: #fff;
+        border-radius: 6px;
+        position: absolute;
+        top: 0;
+        left: 49%;
+        transform: translate(-50%,-50%) scale(0.1);
+        text-align: center;
+        padding: 0 30px 60px;
+        color: #333;
+        visibility: hidden;
+        /*transition: transform 0.4s, top 0.4s;*/
+    }
+
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    .popup img{
+        width: 100px;
+        margin-top: -50px;
+        border-radius: 50px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .popup h2{
+        font-size: 38px;
+        font-weight: 500;
+        margin: 30px 0 10px;
+    }
+    .popup p{
+        font-size: 18px;
+        font-weight: 500;
+        margin: 30px 0 10px;
+    }
+
+    .popup button{
+        width: 100%;
+        margin-top: 50px;
+        padding: 10px 0;
+        background-color: #F0E161;
+        color: #fff;
+        border: 0;
+        outline: none;
+        font-size: 18px;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    }
+
+</style> 
+<!--https://www.w3schools.com/howto/howto_js_popup_chat.asp-->
+<title>Registration</title> 
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+ 
+<script type="text/javascript">
+  function sendEmail() {
+    Email.send({
+      Host: "smtp.gmail.com",
+      Username: "bonvoyageproject1@gmail.com",
+      Password: "pqkzlomjrapmrlnn",
+      To: 'gspriyankasarala@gmail.com',
+      From: "bonvoyageproject1@gmail.com",
+      Subject: "Sending Email using javascript",
+      Body: "Well that was easy!!",
+    })
+      .then(function (message) {
+        alert("mail sent successfully")
+      });
+  }
+
+</script>
+
+</head> 
+<body> 
+<div class="outerbox"> 
+<div class="innerbox"> 
+<form class="form" name="regForm" method="post"> 
+    <input  type = "text"  placeholder = "Name" name="name"></input><br><br><br> <!--https://www.w3schools.com/howto/howto_css_placeholder.asp-->
+    <input  type = "text"  placeholder = "City of Residence" name="city"></input><br><br><br> 
+    <input  type = "text"  placeholder = "Email" name="email"></input><br><br><br> 
+    <input  type = "text"  placeholder = "Phone Number" name="number"></input><br><br><br> 
+    <input  type = "text"  placeholder = "Travel Destination" name="destination"></input><br><br><br> 
+    <input  type = "text"  placeholder = "Date of Travel" name="date"></input><br><br><br> 
+    <input  type = "text"  placeholder = "Number of People" name="total"></input><br><br><br> 
+    
+    <select id="type" name="type" >
+        <option value= "vacationType">Vacation Type</option> 
+        <option value="familyTrip">Family Trip</option> 
+        <option value="honymoonTrip">Honeymoon</option> 
+        <option value="friendsTrip">Friends Trip</option> 
+        <option value="corporateTrip">Corporate Trip</option> 
+  	</select><br><br><br><br><br><br><br> 
+
+<input class="submit" type = "submit" id="myBtn" onclick="sendEmail()" />
+
+</form>
+<!--<div class="popup" id="popup">
+    <img src="C:\Users\Priyanka GS\OneDrive\Desktop\BON VOYAGE\IMAGES\tick.png">
+    <h2>Thank You!</h2>
+    <p>Your details has been successfully submitted. Thanks!</p>
+    <button type="button" class="close" onclick="closePopup()">OK</button>
+</div>-->
+</div>
+</div>
+
+<!--<script type="text/javascript"> 
+
+function validate(){ 
+
+    var name = document.forms["regForm"]["name"].value; 
+    var city = document.forms["regForm"]["city"].value; 
+    var email = document.forms["regForm"]["email"].value; 
+    var number = document.forms["regForm"]["number"].value; 
+    var destination = document.forms["regForm"]["destination"].value; 
+    var date = document.forms["regForm"]["date"].value; 
+    var type = document.forms["regForm"]["type"].value;
+    if(name == ""){ 
+        alert("Enter your name"); 
+        return false; 
+    } 
+    if(/\d/.test(name)){ 
+        alert("Your name should not be in number"); 
+        return false; 
+    } 
+    if(city == ""){ 
+        alert("Enter the city of residence"); 
+        return false; 
+    } 
+    if(email == ""){ 
+        alert("Enter your Email"); 
+        return false; 
+    } 
+    if(!regForm.email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){ 
+        alert("Enter valid Email"); 
+        return false; 
+    } 
+    if(number == ""){ 
+        alert("Enter your phone number"); 
+        return false; 
+    } 
+    if(isNaN(number) && number.length != 10){ 
+        alert("Enter valid phone number") 
+        return false; 
+    } 
+    if(destination == ""){ 
+        alert("Enter your travel destination"); 
+        return false; 
+    } 
+    if(date == ""){ 
+        alert("Enter the date of travel"); 
+        return false; 
+    }
+    if(type == "vacationType"){ 
+        alert("Select the vacation type"); 
+        return false; 
+    } 
+}
+let popup = document.getElementById("popup");
+function openPopup() {
+    popup.classList.add("open-popup");
+}
+function closePopup() {
+    popup.classList.remove("open-popup");
+}
+
+</script>-->
+
+</body> 
+</HTML> 

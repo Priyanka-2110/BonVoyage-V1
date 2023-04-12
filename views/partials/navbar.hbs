@@ -1,0 +1,55 @@
+    <header>
+		<img class = "logo" src="/IMAGES/BonVoyage ICO.ico" alt="Logo">
+
+		{{#if user}}
+
+		<div class="NavRight">
+
+			<a href="/home" style="flex: 0.2; padding-top: 13px;">HOME</a>
+			
+			<div class="india">
+
+				<a href="#" style="flex: 0.2; position: relative; top: 12px;">INDIAN PACK</a>
+					<div class="india-content">
+			      		<a href="/NorthIndia">NORTH INDIA</a>
+			     		<a href="/SouthIndia">SOUTH INDIA</a>
+			      		<a href="/EastIndia">EAST INDIA</a>
+			      		<a href="/WestIndia">WEST INDIA</a>
+		    		</div>
+	    	</div>
+
+	    	<div class="international">
+				<a href="#" style="flex: 0.2; position: relative; top: 12px;">INTERNATIONAL PACK</a>
+				<div class="international-content">
+			      		<a href="#">ASIA</a>
+						<a href="#">AMERICA</a>
+						<a href="#">AFRICA</a>
+						<a href="#">EUROPE</a>
+						<a href="#">AUSTRALIA</a>
+		    	</div>
+			</div>
+
+			<div class="island">
+				<a href="#" style="flex: 0.2; position: relative; top: 12px;">ISLAND</a>
+				<div class="island-content">
+					<a href="#">MADAGASKAR</a>
+					<a href="#">MALDIVES</a>
+					<a href="#">MAURITIUS</a>
+					<a href="#">REUNION</a>
+					<a href="#">SRI LANKA</a>
+				</div>
+			</div>
+
+		</div>
+		<div class="NavLeft">
+		<!--	<a href="Register.html" style="flex: 0.2; padding-top: 13px;">REGISTER</a>  -->
+        <!--<a href="/profile">Profile</a>-->
+        <a href="/auth/logout">LOGOUT</a>
+		
+        {{else}}
+        <a href="/register">REGISTER</a>
+        <a href="/">LOGIN</a>
+        {{/if}}
+
+		</div>
+	</header>

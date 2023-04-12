@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{> header }}
+    <style>
+body{
+  background-image: url('/IMAGES/welcomeBackground.jpg'); 
+	background-repeat: no-repeat; 
+	background-attachment: fixed;  
+  background-size: 100% 100%; 
+}
+.outerbox{ 
+  width: 1050px; 
+  height: 600px;
+  border: 1px solid rgba(255,255,255,0.3);  
+  border-radius: 20px; 
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+  margin: 110px auto 0px auto; 
+  position: relative; 
+  bottom: 50px;
+  background-image: url('/IMAGES/Welcome.png');
+  background-size: 100% 100%; 
+} 
+
+.form{ 
+    margin: 110px; 
+    position: relative; 
+    bottom: 40px; 
+    height: 400px; 
+} 
+
+input{ 
+    font-family: poppins; 
+    font-size: 18px; 
+    width: 300px; 
+    border: 1.5px solid #F0E161; 
+    border-radius: 3px; 
+    outline: 0; 
+    padding: 8px; 
+    background-color: #fff;  /*grey*/ 
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3); 
+} 
+.head{
+  position: relative;
+  top: 50px;
+  left: 730px;
+  font-size: 30px;
+}
+.data{
+  position: relative;
+  top: 80px;
+  left: 650px;
+}
+.signup{
+  position: relative;
+  top: 90px;
+  bottom: 100px;
+  left: 710px;
+}
+.submit{ 
+    width: 200px; 
+    padding: 8px; 
+    font-size: 16px; 
+    font-family: poppins; 
+    border-radius: 20px; 
+    background-color: #F0E161; 
+    color: black; 
+    cursor: pointer; 
+    border: 1px solid rgbs(255,255,255,0.3); 
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3); 
+    position: relative; 
+    left: 710px; 
+    top: 90px;
+    border: none;
+} 
+.error{
+  color: red;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  left: 280px;
+  top: 50px;
+}
+.good{
+  color: green;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  left: 280px;
+  top: 50px;
+} 
+
+    </style>
+    <body>
+    <!--{{> navbar }}-->
+    <div class="outerbox"> 
+      <div class="head">REGISTER</div>
+      {{#if msg}}
+      <p class="{{msg_type}}">{{msg}}</p>
+      {{/if}}
+      <form action="/auth/register" method="post">
+
+        <div class="data">
+          <input type="text" name="name" placeholder="name" id="name" />
+        </div><br><br>
+
+        <div class="data">
+          <input type="email" name="email" placeholder="Email" id="email" />
+        </div><br><br>
+
+        <div class="data">
+          <input type="password" name="password" placeholder="Password" id="password" />
+        </div><br><br>
+
+        <div class="data">
+          <input type="password" name="confirm_password" placeholder="Confirm Password" id="password" />
+        </div><br><br>
+
+        <button  class="submit" type="submit">Register</button><br><br>
+        <div class="signup">
+          Already a member ? <a href="/">Login now</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

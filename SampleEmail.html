@@ -1,0 +1,27 @@
+<!DOCTYPE HTML> 
+<HTML>
+    <head>
+        <title>Registration</title>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    </head>
+    <body>
+        <form method="post">
+            <input type="button" value="Submit" onclick="sendEmail()"/>
+        </form>
+        <script>
+            function sendEmail(){
+                Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "bonvoyageproject1@gmail.com",
+                Password : "BonVoyage@123",
+                To : 'gspriyankasarala@gmail.com',
+                From : "bonvoyageproject1@gmail.com",
+                Subject : "This is the subject",
+                Body : "And this is the body"
+                }).then(
+                message => alert(message)
+                );
+            }
+        </script>
+    </body>
+    </HTML>

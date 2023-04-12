@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{> header }}
+    <!--<head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Bon Voyage
+        </title>
+    </head>-->
+  <body>
+    {{> navbar }}
+    <!--<header>
+		<img class = "logo" src="C:\Users\Priyanka GS\OneDrive\Desktop\BON VOYAGE\IMAGES\BonVoyage ICO.ico" alt="Logo">
+		<div class="NavRight">
+
+			<a href="BonVoyage.html" style="flex: 0.2; padding-top: 13px;">HOME</a>
+			
+			<div class="india">
+
+				<a href="#" style="flex: 0.2; position: relative; top: 12px;">INDIAN PACK</a>
+					<div class="india-content">
+			      		<a href="NorthIndia.html">NORTH INDIA</a>
+			     		<a href="SouthIndia.html">SOUTH INDIA</a>
+			      		<a href="EastIndia.html">EAST INDIA</a>
+			      		<a href="WestIndia.html">WEST INDIA</a>
+		    		</div>
+	    	</div>
+
+	    	<div class="international">
+				<a href="#" style="flex: 0.2; position: relative; top: 12px;">INTERNATIONAL PACK</a>
+				<div class="international-content">
+			      		<a href="#">ASIA</a>
+						<a href="#">AMERICA</a>
+						<a href="#">AFRICA</a>
+						<a href="#">EUROPE</a>
+						<a href="#">AUSTRALIA</a>
+		    	</div>
+			</div>
+
+			<div class="island">
+				<a href="#" style="flex: 0.2; position: relative; top: 12px;">ISLAND</a>
+				<div class="island-content">
+					<a href="#">MADAGASKAR</a>
+					<a href="#">MALDIVES</a>
+					<a href="#">MAURITIUS</a>
+					<a href="#">REUNION</a>
+					<a href="#">SRI LANKA</a>
+				</div>
+			</div>
+
+		</div>
+		<div class="NavLeft">
+
+		{{#if user}}
+        <a href="/home">Home</a>
+        <a href="/profile">Profile</a>
+        <a href="/auth/logout">Logout</a>
+        {{else}}
+        <a href="/register">Register</a>
+        <a href="/">Login</a>
+        {{/if}}
+
+		</div>
+	</header>-->
+    <div class="container-fluid">
+      <h2>User Profile</h2>
+      <img src="profile.png"/>
+      <h3>Name : {{user.NAME}}</h3>
+      <h3>Email : {{user.EMAIL}}</h3>
+    </div>
+  </body>
+</html>

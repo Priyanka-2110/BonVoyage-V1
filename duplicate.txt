@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<link rel="stylesheet" href="StyleSheet.css">
+	<title>
+		Bon Voyage
+	</title>
+</head>
+
+<body>
+	<header>
+		<img class = "logo" src="C:\Users\Priyanka GS\OneDrive\Desktop\BON VOYAGE\IMAGES\BonVoyage ICO.ico" alt="Logo">
+		<div class="NavRight">
+
+			<a href="#" style="flex: 0.2; padding-top: 13px;">HOME</a>
+			<div class="india">
+
+				<a href="#" style="flex: 0.3; position: relative; top: 12px;">INDIAN PACK</a>
+					<div class="india-content">
+			      		<a href="#">NORTH INDIA</a>
+			     		<a href="#">SOUTH INDIA</a>
+			      		<a href="#">EAST INDIA</a>
+			      		<a href="#">WEST INDIA</a>
+		    		</div>
+	    	</div>
+
+	    	<div class="international">
+				<a href="#" style="flex: 0.4; position: relative; top: 12px;">INTERNATIONAL PACK</a>
+				<div class="international-content">
+			      		<a href="#">ASIA</a>
+						<a href="#">AMERICA</a>
+						<a href="#">AFRICA</a>
+						<a href="#">EUROPE</a>
+						<a href="#">AUSTRALIA</a>
+		    	</div>
+			</div>
+
+			<div class="island">
+				<a href="#" style="flex: 0.2; position: relative; top: 12px;">ISLAND</a>
+				<div class="island-content">
+					<a href="#">MADAGASKAR</a>
+					<a href="#">MALDIVES</a>
+					<a href="#">MAURITIUS</a>
+					<a href="#">REUNION</a>
+					<a href="#">SRI LANKA</a>
+				</div>
+			</div>
+
+		</div>
+		<div class="NavLeft">
+			<a href="#" style="flex: 1; padding-top: 13px;">REGISTER</a>
+		</div>
+	</header>
+	<div id="slider">
+		<figure>
+			<img src="C:\Users\Priyanka GS\OneDrive\Desktop\BON VOYAGE\IMAGES\SliderBuilding.jpg">
+			<img src="C:\Users\Priyanka GS\OneDrive\Desktop\BON VOYAGE\IMAGES\SliderForest.jpg">
+			<img src="C:\Users\Priyanka GS\OneDrive\Desktop\BON VOYAGE\IMAGES\SliderStreet.jpg">
+			<img src="C:\Users\Priyanka GS\OneDrive\Desktop\BON VOYAGE\IMAGES\SliderIsland.jpg">
+		</figure>
+	</div>
+</body>
+</HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header{
+	width: 100%;
+	background-color: black;
+	height: 100px;
+}
+.NavRight{
+	/*border: 2px solid yellow;*/
+	position: relative;		/*For moving container to the center of header*/
+	bottom: 80px;			/*For moving container to the center of header*/
+	left: 130px;				/*For moving container to the center of header*/
+	width: 500px;
+	display: flex;
+	justify-content:space-around;
+}
+.NavLeft{
+	/*border: 2px solid yellow;*/
+	position: relative;		/*For moving container to the center of header*/
+	bottom: 122px;			/*For moving container to the center of header*/
+	left: 1250px;				/*For moving container to the center of header*/
+	width: 225px;
+	display: flex;
+	justify-content: center;	
+}
+.NavRight a, .NavLeft a{
+	width: 60px;
+	/*border: 2px solid red;*/
+	text-align: center;
+	padding: 10px 2px;
+	text-decoration: none;
+	color: white;
+}
+.logo{
+	height: 70px;
+	width: 90px;
+	/*border: 1px solid yellow;*/
+	padding: 15px 30px;
+	border-radius: 25%;
+}
+.india-content{
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 90px;
+  top: 32px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border: 1px solid yellow;
+}
+.international-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  right: 110px;
+  top: 32px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border: 1px solid yellow;
+}
+.island-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 422px;
+  top: 32px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border: 1px solid yellow;
+}
+.india-content a {
+  color: black;
+  padding: 5px 5px;
+  width: 150px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  white-space: nowrap; 
+}
+.international-content a {
+  color: black;
+  padding: 5px 5px;
+  width: 150px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  white-space: nowrap; 
+}
+.island-content a {
+  color: black;
+  padding: 5px 5px;
+  width: 150px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  white-space: nowrap; 
+}
+.india-content a:hover {background-color: yellow;}
+.international-content a:hover {background-color: yellow;}
+.island-content a:hover {background-color: yellow;}
+
+.india:hover .india-content {
+  display: block;
+}
+.international:hover .international-content {
+  display: block;
+}
+.island:hover .island-content {
+  display: block;
+}
+#slider{
+	overflow: hidden;
+}
+#slider figure{
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 20s slider infinite;
+}
+#slider figure img{
+	width: 1520px;
+	height: 600px;
+	float: left;
+}
+@keyframes slider{
+	0%{
+		left: 0;
+	}
+	20%{
+		left: -100%;
+	}
+	25%{
+		left: -100%;
+	}
+	45%{
+		left: -200%;
+	}
+	50%{
+		left: -200%;
+	}
+	70%{
+		left: -300%;
+	}
+	75%{
+		left: -300%;
+	}
+	95%{
+		left: -300%;
+	}
+	100%{
+		left: -400%;
+	}
+}
+
+
+
+
+
+
+-----------------------------------------------------------------------------------Register Form--------------------------------------------------------------------------------------------
+
+
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<style>
+		body{
+			background-image: url('IMAGES/Project.jpg');
+			
+		  	background-repeat: no-repeat;
+		  	background-attachment: fixed; 
+		  	background-size: 100% 100%;
+		}
+		.outerbox{
+			width: 550px;
+			margin: 40px auto 0px auto;
+			position: relative;
+			top: 8px;
+		}
+		.innerbox{
+			background-color: rgba(0,0,0,0.5);   /*black*/
+			width: 100%;
+			font-size: 18%;
+			border-radius: 10px;
+			border: 1px solid rgba(255,255,255,0.3);  /*white*/
+			box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+			color: white;
+		}
+		.form{
+			margin: 110px;
+			position: relative;
+			bottom: 40px;
+			height: 400px;
+		}
+
+		/*label{
+			font-family: poppins;
+			font-size: 18px;
+		}*/
+		input,select{
+			font-family: poppins;
+			font-size: 18px;
+			width: 300px;
+			border: 1.5px solid #F0E161;
+			border-radius: 3px;
+			outline: 0;
+			padding: 8px;
+			background-color: #fff;  /*grey*/
+			box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+		}
+		select{
+			width: 319px;
+			font-family: poppins;
+			font-size: 18px;
+			background-color: #fff;
+			color: grey;
+		}
+		.submit{
+			width: 200px;
+			padding: 8px;
+			font-size: 16px;
+			font-family: poppins;
+			border-radius: 3px;
+			background-color: #F0E161;
+			color: black;
+			cursor: pointer;
+			border: 1px solid rgbs(255,255,255,0.3);
+			box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+			position: relative;
+			left: 60px;
+		}
+		.select option:hover {background-color: #F0E161;}
+
+	</style>
+	<!--<link rel="stylesheet" href="StyleSheet.css">-->
+	<title>
+		Registration
+	</title>
+</head>
+
+<body>
+	<div class="outerbox">
+		<div class="innerbox">
+			<form class="form">
+				
+				<input  type = "text"  placeholder = "Name"></input><br><br><br>
+				
+				<input  type = "text"  placeholder = "City of Residence"></input><br><br><br>
+				
+				<input  type = "text"  placeholder = "Email"></input><br><br><br>
+				
+				<input  type = "text"  placeholder = "Phone Number"></input><br><br><br>
+				
+				<input  type = "text"  placeholder = "Travel Destination"></input><br><br><br>
+				
+				<input  type = "text"  placeholder = "Date of Travel"></input><br><br><br>
+				
+				<input  type = "text"  placeholder = "Number of People"></input><br><br><br>
+
+				
+					<select name="Vacation Type">
+						<option>Vacation Type</option>
+					    <option>Family Trip</option>
+					    <option>Honeymoon</option>
+					    <option>Friends Trip</option>
+					    <option>Corporate</option>
+				  	</select><br><br><br><br><br><br><br>
+
+				<input class="submit" type = "submit" value = "Submit"></input>
+			</form>
+		</div>
+	</div>
+</body>
+
+</HTML>

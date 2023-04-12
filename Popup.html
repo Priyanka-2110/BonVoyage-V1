@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: relative;
+  top: 0;
+  left: 400px;
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  width: 50%; /* Full width */
+  height: 100%;  /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: auto;
+  padding: 0;
+  width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+      border-radius: 6px;
+      border: 1.5px solid #F0E161;
+      text-align: center;
+      padding: 0 30px 30px;
+      color: #333;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+      width: 100%;
+      margin-top: 50px;
+      padding: 10px 0;
+      background: #F0E161;
+      color: #fff;
+      border: 0;
+      outline: none;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+    img{
+      width: 75px;
+      margin-top: -40px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    h2{
+      font-size: 38px;
+      font-weight: 500;
+      margin: 30px 0 10px;
+    }
+
+    button{
+      width: 200px;
+      margin-top: 50px;
+      padding: 10px 0;
+      background: #F0E161;
+      color: #fff;
+      border: 0;
+      outline: none;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+</style>
+</head>
+<body>
+
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+
+  <div class="modal-content">
+    <div class="popup" id="popup">
+        <img src="C:\Users\Priyanka GS\OneDrive\Desktop\BON VOYAGE\IMAGES\tick.png">
+        <h2>Thank You!</h2>
+        <p>Your details has been successfully submitted. Thanks!</p>
+        <button class="close">OK</button>
+            </div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+    /*    function validate(){
+          
+          let Btn = document.querySelector('myBtn')
+
+          var name = document.forms["regForm"]["name"].value;
+          var city = document.forms["regForm"]["city"].value;
+          var email = document.forms["regForm"]["email"].value;
+          var number = document.forms["regForm"]["number"].value;
+          var destination = document.forms["regForm"]["destination"].value;
+          var date = document.forms["regForm"]["date"].value;
+          var type = document.forms["regForm"]["type"].value;
+          var btn = document.getElementById("myBtn");
+          var modal = document.getElementById("myModal");
+
+          if(name == ""){
+            alert("Enter your name");
+            return false;
+            //btn.onclick = alert("Enter your name");
+          }
+
+          if(/\d/.test(name)){
+            alert("Your name should not be in number");
+            return false;
+            //btn.onclick = alert("Your name should not be in number");
+          }
+          
+          if(city == ""){
+            alert("Enter the city of residence");
+            return false;
+            //btn.onclick = alert("Enter the city of residence");
+          }
+          if(email == ""){
+            alert("Enter your Email");
+            return false;
+            //btn.onclick = alert("Enter valid Email");
+          }
+          if(!regForm.email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+            alert("Enter valid Email");
+            return false;
+            //btn.onclick = alert("Enter valid Email");
+          }
+          if(number == ""){
+            alert("Enter your phone number");
+            return false;
+            //btn.onclick = alert("Enter your phone number");
+          }
+          if(isNaN(number) && number.length != 10){
+            alert("Enter valid phone number")
+            return false;
+            //btn.onclick = alert("Enter valid phone number");
+          }
+          
+          if(destination == ""){
+            alert("Enter your travel destination");
+            return false;
+            //btn.onclick = alert("Enter your travel destination");
+          }
+          if(date == ""){
+            alert("Enter the date of travel");
+            return false;
+            //btn.onclick = alert("Enter the date of travel");
+          }
+
+          if(type == "vacationType"){
+            alert("Select the vacation type");
+            return false;
+            //btn.onclick = alert("Select the vacation type");
+          }
+        }
+    */ 

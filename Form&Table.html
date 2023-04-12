@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<style>
+		body{
+			background-image: url('IMAGES/Project.jpg');
+		  	background-repeat: no-repeat;
+		  	background-attachment: fixed; 
+		  	background-size: 100% 100%;
+		}
+		.outerbox{
+			width: 550px;
+			margin: 40px auto 0px auto;
+			position: relative;
+			top: 8px;
+		}
+		.innerbox{
+			background-color: rgba(0,0,0,0.5);   /*black*/
+			width: 100%;
+			font-size: 18%;
+			border-radius: 10px;
+			border: 1px solid rgba(255,255,255,0.3);  /*white*/
+			box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+			color: white;
+		}
+		.form{
+			margin: 110px;
+			position: relative;
+			bottom: 40px;
+			height: 400px;
+		}
+		input,select{
+			font-family: poppins;
+			font-size: 18px;
+			width: 300px;
+			border: 1.5px solid #F0E161;
+			border-radius: 3px;
+			outline: 0;
+			padding: 8px;
+			background-color: #fff;  /*grey*/
+			box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+		}
+		select{
+			width: 319px;
+			font-family: poppins;
+			font-size: 18px;
+			background-color: #fff;
+			color: grey;
+		}
+		.submit{
+			width: 200px;
+			padding: 8px;
+			font-size: 16px;
+			font-family: poppins;
+			border-radius: 3px;
+			background-color: #F0E161;
+			color: black;
+			cursor: pointer;
+			border: 1px solid rgbs(255,255,255,0.3);
+			box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+			position: relative;
+			left: 60px;
+		}
+		.select option:hover {background-color: #F0E161;}
+		table {
+  			font-family: arial, sans-serif;
+  			/*border-collapse: collapse;*/
+  			width: 100%;
+  			height: 620px;
+  			position: relative;
+  			left: 700px;
+  			bottom: 620px;
+		}
+
+		td, th {
+		  border: 1px solid #dddddd;
+		  border-radius: 10px;
+		  font-size: 18px;
+		  border-color: black;
+		  text-align: center;
+		  padding: 8px;
+		}
+
+	</style>
+	<!--<link rel="stylesheet" href="StyleSheet.css">-->
+	<title>
+		Registration
+	</title>
+</head>
+
+<body>
+	<div class="outerbox" style="margin-left: 100px;">
+		<div class="innerbox">
+			<form class="form">
+				
+				<input  type = "text"  placeholder = "Name"></input><br><br><br>
+				<input  type = "text"  placeholder = "City of Residence"></input><br><br><br>
+				<input  type = "text"  placeholder = "Email"></input><br><br><br>
+				<input  type = "text"  placeholder = "Phone Number"></input><br><br><br>
+				<input  type = "text"  placeholder = "Travel Destination"></input><br><br><br>
+				<input  type = "text"  placeholder = "Date of Travel"></input><br><br><br>
+				<input  type = "text"  placeholder = "Number of People"></input><br><br><br>
+					
+					<select name="Vacation Type">
+						<option>Vacation Type</option>
+					    <option>Family Trip</option>
+					    <option>Honeymoon</option>
+					    <option>Friends Trip</option>
+					    <option>Corporate</option>
+				  	</select><br><br><br><br><br><br><br>
+
+				<input class="submit" type = "submit" value = "Submit"></input>
+			</form>
+		</div>
+		<table class="innerbox">
+			  <tr>
+			    <th>PACKAGE</th>
+			    <th>DURATION</th>
+			    <th>PLACES	</th>
+			  </tr>
+			  
+			  <tr>
+			  <td>Delhi</td>
+			  <td>2 Nights 3 Days</td>
+			  <td>Delhi, Vrindavan, Mathura, Gokul, Mahavan, Govardhan, Nandgaon, Barsana</td>
+			  </tr>
+			  
+			  <tr>
+			  <td>Himachal</td>
+			  <td>6 Nights 7 Days</td>
+			  <td>Delhi, Shimla, Manali, Chanigarh</td>
+			  </tr>
+			  
+			  <tr>
+			  <td>Rajastan</td>
+			  <td>7 Nights 8 Days</td>
+			  <td>Delhi, Agra, Jaipur, Jodhpur, Udaipur</td>
+			  </tr>
+			  
+			  <tr>
+			  <td>Haridwar</td>
+			  <td>9 Nights 10 Days</td>
+			  <td>Nainital, Kausani, Corbett, Haridwar, Mussoorie</td>
+			  </tr>
+			  
+			  <tr>
+			  <td>Varanasi</td>
+			  <td>3 Nights 4 Days</td>
+			  <td>Varanasi, Bodhgaya, Gaya, Allahabad</td>
+			  </tr>
+			</table>
+	</div>
+	
+
+
+</body>
+
+</HTML>
